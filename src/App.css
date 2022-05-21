@@ -1,38 +1,234 @@
-.App {
-  text-align: center;
+* {
+    margin:0;
+    padding:0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+html, body {
+    overflow: auto;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-image: url("https://i.imgur.com/yxEK0Jm.png");
+;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover; 
   }
+
+
+.main-container {
+    display: flex;
+    flex-direction: column;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.main-title {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 65vw;
+    min-width: 59vw;
+    height: 3.5em;
+    padding: 0;
 }
 
-.App-link {
-  color: #61dafb;
+.header {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    height: 0;
+    max-width: 65vw;
+    min-width: 59vw;
+    font-weight: bolder;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+/* GPT is a powerful... */
+/* Enter your... */
+.paragraph {
+    font-size: 0.8em;
+    font-weight: bolder;
+    color:rgb(52, 52, 52);
+}
+
+#gpt3 {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    margin: 0 auto;
+    padding-bottom: 1em;
+    padding-top: 4em;
+    max-width: 55vw;
+    min-width: 59vw;
+    font-size: 1.5em;}
+
+/* entire form container */
+.form {
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    margin: 0 auto;
+    background-color: #fff;
+    opacity: 0.88;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 1em;
+}
+
+
+/* "What's..." text and the input box's container */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding-top: 2em;
+    max-width: 65vw;
+    min-width: 55vw;
+}
+
+/* "What's on your mind" */
+.sub-title {
+    display: inline-block;
+    margin-bottom: 0.5em;
+    font-weight: bolder; 
+    font-size: 1.5em;
+}
+
+/* "Your text here */
+.form-control {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 1em;
+    max-height: 15em;
+    max-width: 65vw;
+    min-width: 55vw;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 1em;
+    font-size: 0.95em;
+}
+
+.form-control:focus {
+    background:#fafae8;
+    color: #000;
+}
+
+.btn.btn-primary.send.mt-3 {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    border-radius: 0.47em;
+    color: #fff;
+}
+  
+.btn:active {
+    background: #033C5A;
+    color: #fff;
+    -webkit-transition-duration: 0s; 
+    transition-duration: 0s;  
+}
+  
+  /* when button is not disabled, apply hover effect */
+.btn:hover { 
+    background: #033C5A;
+    color: #fff;
+    -webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;  
+}
+
+#clearBtn {
+    display: none;
+    flex-direction: column;
+    margin: 0 auto;
+    border-radius: 0.47em;
+    color: #fff;
+}
+
+
+/* only the response div */
+.response-div {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 1em;
+    min-height: 5em;
+    max-width: 65vw;
+    min-width: 55vw;
+    background-color: white;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 1em;
+    font-size: 0.95em;
+}
+
+.response-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding-left: 0.1em;
+}
+
+#getalldata {
+    display: none;
+    flex-direction: column;
+    overflow-y: scroll; 
+    margin: 0 auto;
+    padding: 1em;
+    max-height: 30em;
+    max-width: 65vw;
+    min-width: 55vw;
+}
+
+
+table {
+    width: 20em;
+    margin-bottom: 1em;
   }
-  to {
-    transform: rotate(360deg);
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    min-width: 15em;
   }
+
+  /* copyright text in footer */
+p.ft-text-rights {
+    color: #000;
+    font-weight: bold;
+    font-size: 1.1em;
 }
+
+hr {
+    height: 5px;
+    background: #FFC72C;
+    border: none;
+}
+
+#image {
+    position: relative;
+    margin-left: 7.2em;
+    bottom: 1.35em;
+}
+
+#c3p0 {
+    max-width: 1em;
+    max-height: 1em;
+    margin-left: 0.2em;
+}
+
+#spinner {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    height: 5em;
+}
+
+
+  
